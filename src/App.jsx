@@ -1,9 +1,9 @@
-
+import bg from "./assets/bg.webp"
 
 function App() {
 
   return (
-    <div className="font-sans container h-[100vh] bg-sky-200 flex justify-center items-center">
+    <div style={{ backgroundImage: `url(${bg})` }} className="bg-no-repeat bg-cover bg-center font-sans container h-[100vh] age-calculator flex justify-center items-center">
       <div className="bg-white rounded-lg w-[70%] py-20 px-7 shadow-lg">
         <div className="mb-5">
           <h3 className="font-black h-10 text-2xl text-center text-black">Age Calculator</h3>
