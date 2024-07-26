@@ -8,8 +8,10 @@ function App() {
   const calculateAge = () => {
     const today = new Date();
     const birthDate = new Date(birthdate);
-    if(isNaN(birthDate.getTime()) || birthDate > today){
-      alert('Please enter a date up to today.');
+    const lastYear = new Date(today);
+    lastYear.setFullYear(today.getFullYear() - 1)
+    if(isNaN(birthDate.getTime()) || birthDate > lastYear){
+      alert('Please enter a date that is at least one year ago from today.');
       setAge(0)
     }else{
       let age = today.getFullYear() - birthDate.getFullYear();
